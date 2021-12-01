@@ -1,0 +1,3 @@
+yes
+hello world
+天气真好
