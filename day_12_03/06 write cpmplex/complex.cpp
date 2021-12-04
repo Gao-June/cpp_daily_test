@@ -16,7 +16,7 @@ int main(){
     prinT(c1);
 
     // 检查重载操作符
-    c1 -= c2;
+    c1 *= c2;
     prinT(c1);
 
 
