@@ -1,5 +1,6 @@
 /*
     练习一下static的写法
+    刚才上传的时候中文乱码了，改成 GB 2312再试试看
 */
 
 #include <iostream>
