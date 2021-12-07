@@ -17,6 +17,8 @@ public:
 
     // conversion func
     operator double( ) const{
+        // return (doule) ( _a / _b )
+
         double ex_a = 0.0 + _a;
         double ex_b = 0.0 + _b;
         return ex_a / ex_b ;
