@@ -66,3 +66,25 @@
     练习使用头文件  
 **sum.h** 
     对应的头文件
+
+### 02_class_private
+**main.cpp**  
+    cpp 的 class 尽量将数据设为 private，不让外界看到；
+    如果需要访问的话，可以再写函数 去访问数据。
+
+### 3_constructor
+**main.cpp**  
+    构造函数 可以有多种写法， 可以重载。
+    但是注意，重载的前提是参数不一样
+### 04_func_const
+**main.cpp**  
+    func const
+### 05 return by reference
+**main.cpp**  
+    func const
+### 06 write complex
+**main.cpp**  
+    函数主题，尝试写一个 complex 类，包括一些 operator
+**complex.h**  
+    头文件
+

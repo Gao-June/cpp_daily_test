@@ -9,7 +9,8 @@ class complex;
 
 class complex{
 public:
-    // 榛樿鏋勯�犲嚱鏁?
+    // 榛樿?ゆ瀯閫犲嚱鏁?
+    // 完犊子了，我也不知道这里的乱码是什么了。
     complex ( double r = 0, double i = 0 ) : re( r ), im( i ) { }
 
     // 閲嶈浇鎿嶄綔绗?
