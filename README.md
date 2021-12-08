@@ -42,7 +42,7 @@
 **main.cpp** 
     练习使用 int const *p  和 int * const p
 ### 04_func_const
-**main.cpp** 
+**main.cpp**  
     成员函数后面加 const，表示常量函数
     const用在成员函数后 主要是针对类的const 对象
     const对象只能调用const成员函数。
@@ -63,6 +63,6 @@
 ## day_12_03
 ### 01_include
 **main.cpp** 
-    练习使用头文件
+    练习使用头文件  
 **sum.h** 
     对应的头文件
