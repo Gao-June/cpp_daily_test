@@ -84,7 +84,52 @@
     func const
 ### 06 write complex
 **main.cpp**  
-    函数主题，尝试写一个 complex 类，包括一些 operator
+    函数主题，尝试写一个 complex 类，包括一些 operator  
 **complex.h**  
     头文件
+### 07 深拷贝，浅拷贝  
+**main.cpp**  
+    深拷贝，浅拷贝
+## day_12_04
+### 01 static_cast
+**main.cpp**  
+    练习使用 static_cast  
+**other_test_static_cast.cpp**  
+    主要研究 static_cast 里面关于类的转换
+### 02 static  
+**main.cpp**  
+    练习一下static的写法  
+    刚才上传的时候中文乱码了，改成 GB 2312再试试看
+## day_12_07
+### 01 virtual func  
+**main.cpp**  
+    练习 基类写虚函数、纯虚函数；  
+    派生类调用基类的函数、虚函数，改写基类的虚函数、纯虚函数
+### 02 转换函数  
+**main.cpp**  
+    转换函数 conversion func  
+    写一个分数形式的转换函数  
+    x = a/b  
+### 03 转换函数 + operator  
+**main.cpp**  
+    转换函数 conversion func  
+    
+    相对于上一个转换函数（02_转换函数） 这里再引入 operator+  
+    同时将 x 定义为 Base 类型  
+
+    编译器报错 ambiguous，因为编译器不知道生成转化函数，还是 operator+ ,解决方法在 04章节  
+### 04 转换函数+operator+explict  
+**main.cpp**  
+    转换函数 conversion func + operator + explicit  
+    
+    相对于上一个转换函数（02_转换函数） 这里再引入 operator+  
+    引入 explicit 是为了禁止编译器自动做隐式转换（在 ctor 处）  
+    同时将 x 定义为 double 类型  
+### 05 练习operator
+**main.cpp**  
+    再练习一下 operator 的使用方法  github没显示中文注释  
+
+## day_12_08
+
+
 
