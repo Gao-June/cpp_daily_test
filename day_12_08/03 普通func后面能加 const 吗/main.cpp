@@ -8,6 +8,7 @@
 
 using namespace std;
 
+// 普通函数后 不能增加 const
 int sum( int a, int b ) const {
     return a + b;
 }
