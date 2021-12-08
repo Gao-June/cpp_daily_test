@@ -4,129 +4,129 @@
     视屏课提供的源代码
 
 ## day_11_17
-**ForOne.cpp**  
+>**ForOne.cpp**  
     “hello_world”测试代码 
 
 ## day_11_25
-### 01_primer_test1
-**main.cpp** 
+>### 01_primer_test1
+>>**main.cpp** 
     练习使用 cosnt *, *const 
 
 ## day_11_26
-### 01_head_fild 
-**main.cpp**  
+>### 01_head_fild 
+>>**main.cpp**  
     练习使用头文件
-**funsum.h** 
+>>**funsum.h** 
     对应的头文件
-### 02_vector
-**main.cpp**  
+>### 02_vector
+>>**main.cpp**  
     简单小测试 string、sizeof()
-### 03_const_cast
-**main.cpp**  
+>### 03_const_cast
+>>**main.cpp**  
     const_cast<> 使用
-### 04_overriad
-**main.cpp** 
+>### 04_overriad
+>>**main.cpp** 
     练习使用 重载 重写 覆盖
-### 05_func_point
-**main.cpp** 
+>### 05_func_point
+>>**main.cpp** 
     练习使用 函数指针
 
 ## day_11_28
-### 01_class
-**main.cpp** 
+>### 01_class
+>>**main.cpp** 
     写个class模板，以后就复制这一个
-### 02_class
-**main.cpp** 
+>### 02_class
+>>**main.cpp** 
     默认构造函数、 this->
-### 03_const
-**main.cpp** 
+>### 03_const
+>>**main.cpp** 
     练习使用 int const *p  和 int * const p
-### 04_func_const
-**main.cpp**  
+>### 04_func_const
+>>**main.cpp**  
     成员函数后面加 const，表示常量函数
     const用在成员函数后 主要是针对类的const 对象
     const对象只能调用const成员函数。
     const对象的值不能被修改，在const成员函数中修改const对象数据成员的值是语法错误
     在const函数中调用非const成员函数是语法错误
-### 05_constructor_func
-**main.cpp** 
+>### 05_constructor_func
+>>**main.cpp** 
     默认构造函数
-### 06_vector_capacity
-**main.cpp** 
+>### 06_vector_capacity
+>>**main.cpp** 
     练习使用 vector capacity()
 
 ## day_12_02
-### 01_lambda
-**main.cpp** 
+>### 01_lambda
+>>**main.cpp** 
     写 lambda 函数
 
 ## day_12_03
-### 01_include
-**main.cpp** 
+>### 01_include
+>>**main.cpp** 
     练习使用头文件  
-**sum.h** 
+>>**sum.h** 
     对应的头文件
 
-### 02_class_private
-**main.cpp**  
+>### 02_class_private
+>>**main.cpp**  
     cpp 的 class 尽量将数据设为 private，不让外界看到；
     如果需要访问的话，可以再写函数 去访问数据。
 
-### 3_constructor
-**main.cpp**  
+>### 03_constructor
+>>**main.cpp**  
     构造函数 可以有多种写法， 可以重载。
     但是注意，重载的前提是参数不一样
-### 04_func_const
-**main.cpp**  
+>### 04_func_const
+>>**main.cpp**  
     func const
-### 05 return by reference
-**main.cpp**  
+>### 05 return by reference
+>>**main.cpp**  
     func const
-### 06 write complex
-**main.cpp**  
+>### 06 write complex
+>>**main.cpp**  
     函数主题，尝试写一个 complex 类，包括一些 operator  
-**complex.h**  
+>>**complex.h**  
     头文件
-### 07 深拷贝，浅拷贝  
-**main.cpp**  
+>### 07 深拷贝，浅拷贝  
+>>**main.cpp**  
     深拷贝，浅拷贝
 ## day_12_04
-### 01 static_cast
-**main.cpp**  
+>### 01 static_cast
+>>**main.cpp**  
     练习使用 static_cast  
-**other_test_static_cast.cpp**  
+>>**other_test_static_cast.cpp**  
     主要研究 static_cast 里面关于类的转换
-### 02 static  
-**main.cpp**  
+>### 02 static  
+>>**main.cpp**  
     练习一下static的写法  
     刚才上传的时候中文乱码了，改成 GB 2312再试试看
 ## day_12_07
-### 01 virtual func  
-**main.cpp**  
+>### 01 virtual func  
+>>**main.cpp**  
     练习 基类写虚函数、纯虚函数；  
     派生类调用基类的函数、虚函数，改写基类的虚函数、纯虚函数
-### 02 转换函数  
-**main.cpp**  
+>### 02 转换函数  
+>>**main.cpp**  
     转换函数 conversion func  
     写一个分数形式的转换函数  
     x = a/b  
-### 03 转换函数 + operator  
-**main.cpp**  
+>### 03 转换函数 + operator  
+>>**main.cpp**  
     转换函数 conversion func  
     
     相对于上一个转换函数（02_转换函数） 这里再引入 operator+  
     同时将 x 定义为 Base 类型  
 
     编译器报错 ambiguous，因为编译器不知道生成转化函数，还是 operator+ ,解决方法在 04章节  
-### 04 转换函数+operator+explict  
-**main.cpp**  
+>### 04 转换函数+operator+explict  
+>>**main.cpp**  
     转换函数 conversion func + operator + explicit  
     
     相对于上一个转换函数（02_转换函数） 这里再引入 operator+  
     引入 explicit 是为了禁止编译器自动做隐式转换（在 ctor 处）  
     同时将 x 定义为 double 类型  
-### 05 练习operator
-**main.cpp**  
+>### 05 练习operator
+>>**main.cpp**  
     再练习一下 operator 的使用方法  github没显示中文注释  
 
 ## day_12_08
