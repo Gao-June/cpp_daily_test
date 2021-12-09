@@ -24,13 +24,13 @@ int main( ){
 
     // 示例 2，更改 sort排序方式
     vector<int> nums1 = {1,4,6,3,7,8};
-    // 打印初始变化：
+    // 打印初始变化：       1  4  6  3  7  8
     cout << "no1 " << endl;
     for ( auto &n1 : nums1 ){
         cout << n1 << "  ";
     }
     cout << endl;
-    // 正常 sort 后
+    // 正常 sort 后      1  3  4  6  7  8
     sort( nums1.begin(), nums1.end() );
     cout << "no2  " << endl;
     for ( auto &n1 : nums1 ){
@@ -40,13 +40,13 @@ int main( ){
 
     // 使用 lambda 逆序打印
         vector<int> nums2 = {1,4,6,3,7,8};
-    // 打印初始变化：
+    // 打印初始变化：       1  4  6  3  7  8
     cout << "no3 " << endl;
     for ( auto &n2 : nums2 ){
         cout << n2 << "  ";
     }
     cout << endl;
-    // 正常 sort 后
+    // 正常 sort 后         8  7  6  4  3  1
     sort( nums2.begin(), nums2.end(), []( int nu1, int nu2 ){
         return nu1 > nu2;    } 
     );
