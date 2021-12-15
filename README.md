@@ -169,3 +169,5 @@
 >### 01 lambda + sort  
     用 Lambda 实现 sort 逆序  
 
+>### 02 list max_size()  
+    使用 list max_size( ) 查看 list 的最大容量  357913941
