@@ -18,6 +18,13 @@ int main( ){
         nums.pop();
     }
 
+    vector<int> n;
+    n.push_back(1);
+    n.emplace_back(2);
+    n.push_back(3);
+    n.emplace_back(4);
+    n.emplace_back(5);
+
 
     return 0;
 }
