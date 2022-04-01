@@ -1,12 +1,14 @@
 #include <iostream>
+// #include "test_3.h"
 
 using namespace std;
 
+int add_nums( int a, int b );
+
 int main()
 {
-	int16_t a = 1;
-    int32_t b = 2;
-    cout << sizeof(a) << "   " << sizeof(b) << endl;
+    int a = 1, b = 10;
+    cout << add_nums(a, b) << endl;
 
 	return 0;
 }
