@@ -22,8 +22,5 @@ int main( ){
 
     char e = 'a', f = 'b';
     cout << add_num( e, f ) << endl;
-
-
-
     return 0;
 }
