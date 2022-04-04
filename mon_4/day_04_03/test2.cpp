@@ -14,12 +14,12 @@ struct Season{
 
 int main( ){
 
-    vector<Season> seasons;
-    seasons.push_back({ "Spring", 285.0 });
-    seasons.push_back({ "Summer", 296.0 });
-    seasons.push_back({ "Fall", 288.0   });
-    seasons.push_back({ "Winter", 263.0 });
-
+    // vector<Season> seasons;
+    // seasons.push_back({ "Spring", 285.0 });
+    // seasons.push_back({ "Summer", 296.0 });
+    // seasons.push_back({ "Fall", 288.0   });
+    // seasons.push_back({ "Winter", 263.0 });
+    vector<Season> seasons{ { "Spring", 285.0 },{ "Summer", 296.0 }, { "Fall", 288.0   },{ "Winter", 263.0 }};
 
 
     for (const auto& season : seasons){
