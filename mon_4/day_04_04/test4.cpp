@@ -11,8 +11,16 @@ private:
 public:
     stu( int a, int b ) : _a(a), _b(b) {}
 
-    // copy construct
-    stu &operator() ( stu &s );
+    // copy constructor 第一种
+    stu &operator() ( stu &s ){
+        this->_a = s._a;
+        this->_b = s._b;
+        return *this;
+    }
+
+    // copy constructor 第二种
+    stu( const stu &s ) : _a( s._a ), _b( s._b ) {}
+
 
     void print( ){
         cout << _a << '\t' << _b << endl;
@@ -20,12 +28,6 @@ public:
 
 };
 
-stu& stu::operator() ( stu &s ){
-    this->_a = s._a;
-    this->_b = s._b;
-
-    return *this;
-}
 
 int main( ){
     stu a(1,2);
