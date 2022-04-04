@@ -17,8 +17,20 @@ public:
     // + 重载
     inline Nums operator+( const Nums &a);
 
+
+    // 友元函数的定义法更直观（因为有两个参数）
+    friend Nums operator+(const Nums &c1, const Nums &c2);
+    
     void Print( ){
         cout << _a_num << "\t" << _b_num << endl;
+    }
+
+    int get_a( ) const{
+        return this->_a_num;
+    }
+
+    int get_b( ) const{
+        return this->_b_num;
     }
 };
 
@@ -38,6 +50,14 @@ inline Nums Nums::operator+ ( const Nums &a){
     return temp;
 }
 
+Nums operator+(const Nums &c1, const Nums &c2){
+    Nums c3;
+    c3._a_num = c1._a_num + c2._a_num;
+    c3._b_num = c1._b_num + c2._b_num;
+
+    return c3;
+}
+
 int main( ){
     Nums a1(1,2);
     Nums a2(3,4);
@@ -55,6 +75,14 @@ int main( ){
     b1.Print();
     b2.Print();
     b3.Print();
+
+    // + 友元函数版
+    Nums c1(10, 20);
+    Nums c2(30, 40);
+    Nums c3 = c1 + c2;
+    c1.Print();
+    c2.Print();
+    c3.Print();
 
     return 0;
 }
