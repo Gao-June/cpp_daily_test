@@ -17,6 +17,10 @@ public:
         cout << "_p_a : " << _p_a << "  _p_b : " << _p_b << " _p_c :  " << _p_c << endl;
     }
 
+    void do_protected_func( ){
+        p_protected_print( );
+    }
+
 protected:
     int _p_b;
     void p_protected_print( ){
@@ -96,7 +100,7 @@ int main( ){
     cout << "No.1  " << endl;
     person base;
     base.p_public_print();
-    // base.p_protected_print();   // err protected func 不可访问
+    base.do_protected_func();   // protected func 可以被 public 里的函数调用
     
     base._p_a = 1;
     // base._p_b = 2;  // err protected 不可访问
