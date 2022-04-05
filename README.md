@@ -192,4 +192,8 @@
 >### 静态成员函数 
 >### 操作符重载 
 >### const 函数
-### operator<、函数模板
+>### operator<、函数模板
+
+## day_2022_04_05
+>### 练习使用 public/protected/private 三种继承
+
