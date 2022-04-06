@@ -197,3 +197,6 @@
 ## day_2022_04_05
 >### 练习使用 public/protected/private 三种继承
 
+## day_2022_04_06
+>### 函数写在其它 cpp里，而不是之前的 .h
+>### 探究 #define
