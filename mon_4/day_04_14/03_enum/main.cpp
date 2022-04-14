@@ -4,7 +4,7 @@
 
 // 这里的 numbers 就相当于一个类型了
 enum numbers : int
-{
+{ 
     A = 0, B, C = 5, D
 };
 
