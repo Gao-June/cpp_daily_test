@@ -3,7 +3,11 @@
         { 
             "name": "MinGW",
             "intelliSenseMode": "gcc-x64",
-            "compilerPath": "C://mingw64//bin//g++.exe",       // 改为自己电脑上MinGW的编译器地址即可。
+            // 实验室电脑
+            //"compilerPath": "C://mingw64//bin//g++.exe",       // 改为自己电脑上MinGW的编译器地址即可。
+            
+            // 宿舍电脑
+            "compilerPath": "D://Dev-C//Dev-Cpp//MinGW64//bin//g++.exe",
             "includePath": [
                 "${workspaceFolder}"
     ],
