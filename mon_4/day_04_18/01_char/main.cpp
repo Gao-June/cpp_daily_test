@@ -1,9 +1,9 @@
 /*
-    ջ�������Ը���
+    数据存放在 代码区
         char name1[5] = {'a', 'b', 'c', 'd'};
-    �����������ܸ���
+    数据存放在 栈区
         char *name2 = "zxcv";
-    ���������Ը���
+    数据存放在 堆区
        char *name3= new char[5]; 
         strcpy(name3, "qwer"); 
 */
@@ -25,7 +25,7 @@ int main( ){
     char *name2 = "zxcv";   // ISO C++ forbids converting a string constant to 'char*'
     std::cout << "No2.  " <<  name2 << std::endl;
     // name2[2] = 'a';      // �����ڳ����� char* ���ܱ�����ֵ
-    //Change_Char(name2);   // �޽��? char* ���ܱ�����ֵ
+    //Change_Char(name2);   // �޽��? char* ���ܱ�����ֵ
 
     char *name3= new char[5]; 
     strcpy(name3, "qwer");
