@@ -1,11 +1,11 @@
 /*
-    数据存放在 代码区
-        char name1[5] = {'a', 'b', 'c', 'd'};
     数据存放在 栈区
+        char name1[5] = {'a', 'b', 'c', 'd'};
+    数据存放在 代码区
         char *name2 = "zxcv";
     数据存放在 堆区
        char *name3= new char[5]; 
-        strcpy(name3, "qwer"); 
+        strcpy(name3, "qwer");  
 */
 
 
