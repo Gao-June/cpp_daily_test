@@ -1,9 +1,9 @@
 /*
-    Õ»Çø£¬¿ÉÒÔ¸ü¸Ä
+    Õ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½
         char name1[5] = {'a', 'b', 'c', 'd'};
-    ³£Á¿Çø£¬²»ÄÜ¸ü¸Ä
+    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¸ï¿½ï¿½ï¿½
         char *name2 = "zxcv";
-    ¶ÑÇø£¬¿ÉÒÔ¸ü¸Ä
+    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½ï¿½
        char *name3= new char[5]; 
         strcpy(name3, "qwer"); 
 */
@@ -24,8 +24,8 @@ int main( ){
 
     char *name2 = "zxcv";   // ISO C++ forbids converting a string constant to 'char*'
     std::cout << "No2.  " <<  name2 << std::endl;
-    // name2[2] = 'a';      // Êý¾ÝÔÚ³£Á¿Çø char* ²»ÄÜ±»¸ü¸ÄÖµ
-    //Change_Char(name2);   // ÎÞ½á¹û char* ²»ÄÜ±»¸ü¸ÄÖµ
+    // name2[2] = 'a';      // ï¿½ï¿½ï¿½ï¿½ï¿½Ú³ï¿½ï¿½ï¿½ï¿½ï¿½ char* ï¿½ï¿½ï¿½Ü±ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+    //Change_Char(name2);   // ï¿½Þ½ï¿½ï¿? char* ï¿½ï¿½ï¿½Ü±ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
 
     char *name3= new char[5]; 
     strcpy(name3, "qwer");
