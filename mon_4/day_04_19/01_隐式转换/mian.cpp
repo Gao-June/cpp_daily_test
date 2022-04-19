@@ -18,7 +18,7 @@ public:
     }
 
     // 如果这里变成 explicit Entity…… 下面的隐式转换就不能用了。
-    Entity( const int age ) : _Age(age), _Name( "Unknown" ) 
+    Entity( int age ) : _Age(age), _Name( "Unknown" ) 
     {
         std::cout << " 调用了 age 的构造函数 " << std::endl;
     }
@@ -29,6 +29,10 @@ public:
     }
 
     void Print();
+
+    void Hello() const{
+        std::cout << "hello" << std::endl;
+    }
 };
 
 void Entity::Print()
@@ -36,10 +40,12 @@ void Entity::Print()
     std::cout << " The age is : " << _Age << "  The name is :  " << _Name << std::endl;
 }
 
+
 void Print_Entity(const Entity& entity )
 {
     std::cout << "查看隐式转换的结果" << std::endl;
     // entity.Print();      // 为什么这个函数无法被调用
+    entity.Hello();
 }
 
 int main( ){
