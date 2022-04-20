@@ -58,6 +58,7 @@ int main()
     v4.emplace_back( Entity(7, 8, 9) );
 
 //解释为什么中间会多几次 copy：    因为 vector扩容
+//如果提前 reserve() 扩好了容量，那么 push_back() 和 emplace_back()一样快
     // 调用了 3 次默认构造函数，3次拷贝构造函数 
     std::cout << "No.5" << std::endl;
     std::vector<Entity> v5;
