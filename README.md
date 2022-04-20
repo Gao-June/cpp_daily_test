@@ -224,3 +224,5 @@
 >###  operator ->
     学习使用 operator ->
     const指针 只能调用 const func
+###  -> 获取偏移量
+    long long offset_x =  (long long )&( (Vector3*)nullptr)->x;
