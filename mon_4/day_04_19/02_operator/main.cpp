@@ -13,6 +13,9 @@ public:
     void Print();
     Entity operator+ ( const Entity& entity);
     Entity operator+= ( const Entity& entity );
+
+    // Ð´Ò»¸ö operator<<
+    friend std::ostream& operator<< ( std::ostream& stream, const Entity entity );
 };
 
 void Entity::Print()
@@ -32,6 +35,13 @@ Entity Entity::operator+= ( const Entity& entity )
     return *this;
 }
 
+std::ostream& operator<< ( std::ostream& stream, const Entity entity )
+{
+    stream << entity._x << "  " << entity._y << std::endl;
+    return stream;
+}
+
+
 int main()
 {
     Entity a(1,1);
@@ -45,6 +55,9 @@ int main()
     Entity c(3,3);
     c += a;
     c.Print();
+
+    Entity d(4,5);
+    std::cout << d << std::endl;
 
     return 0;
 }
