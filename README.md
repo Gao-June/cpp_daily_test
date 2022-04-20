@@ -221,3 +221,6 @@
 
 ## day_2022_04_20
 >###  手写 string
+>###  operator ->
+    学习使用 operator ->
+    const指针 只能调用 const func
