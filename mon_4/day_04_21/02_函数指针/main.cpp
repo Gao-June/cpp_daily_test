@@ -1,3 +1,7 @@
+/**
+ * 函数指针功能：让代码更干净
+*/
+
 #include <iostream>
 
 int Add_nums( const int &a, const int &b )
