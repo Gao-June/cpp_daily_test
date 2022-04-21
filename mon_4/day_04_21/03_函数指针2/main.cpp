@@ -25,7 +25,15 @@ void Fun_each( std::vector<int> Nums, void(*Ptr)(int) )
 int main()
 {
     std::vector<int> Nums{1,3,5,7,3};
+
+    std::cout << "No.1" << std::endl;
+    // 常规调用 函数指针
     Fun_each(Nums, Print);
+
+    std::cout << "No.2" << std::endl;
+    // 使用 lambda 调用
+    Fun_each( Nums, [](int value) { std::cout << "num value is : " << value << std::endl; } );
+
 
     return 0;
 }
