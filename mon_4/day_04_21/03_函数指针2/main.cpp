@@ -4,6 +4,7 @@
  *  在 函数 Func_each() 中使用 Print() 这个函数
  * 
  * 在方法-2 中给出了 lambda 代替函数指针的实例
+ *  所有函数指针 都可以用 lambda 代替
 */
 
 #include <iostream>
