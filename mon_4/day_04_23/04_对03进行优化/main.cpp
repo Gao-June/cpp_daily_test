@@ -2,6 +2,8 @@
  *  对 03 中的程序运行时间进行优化；
  * 写一个 class Timer
  *  构造函数初始化时间，析构函数求结束时间（利用了程序运行完调用析构函数的特点） 
+ * 
+ * \n 比 endl 快
 */
 
 #include <iostream>
@@ -18,7 +20,7 @@ public:
     Timer( ){
         _Start = std::chrono::high_resolution_clock::now();
 
-        cout << "Timer begin" << endl; 
+        cout << "Timer begin\n"; 
     }
 
     ~Timer( ){
@@ -26,7 +28,7 @@ public:
         _Duration = _End - _Start;
 
         float ms = _Duration.count() * 1000.0f;
-        cout << "Timer end took:  " << ms << "  s" << endl; 
+        cout << "Timer end took:  " << ms << "  s\n"; 
     }
 
 };
@@ -37,7 +39,7 @@ int main( ){
     Timer Time_loss;
 
     for( int i = 0; i < 5; i ++ ){
-        std::cout << "No. " << i << std::endl;
+        std::cout << "No. " << i << "\n";
     }
 
     return 0;
