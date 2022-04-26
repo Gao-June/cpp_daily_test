@@ -68,6 +68,8 @@
         "compare": "cpp",
         "concepts": "cpp",
         "iterator": "cpp",
-        "numbers": "cpp"
+        "numbers": "cpp",
+        "semaphore": "cpp",
+        "stop_token": "cpp"
     }
 }

@@ -260,3 +260,6 @@
 >### C++ 生成到 C++17
     配置完后要重启 vs code才行
 >### 更新了一个测时的 项目 Instrumentor Timer
+
+>###  这里使用了C++17 的特性 string_view
+通过对 operator new() 的测试，能节省 一半的内存开销
