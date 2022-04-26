@@ -27,8 +27,8 @@ namespace Benchmark {
         PROFILE_FUNCTION();
 
         std::cout << "Running Benchmarks..." << std::endl;
-        std::thread t1([]() { Fibonacci(9); });
-        std::thread t2([]() { Fibonacci(11); });
+        std::thread t1([]() { Fibonacci(12); });
+        std::thread t2([]() { Fibonacci(15); });
 
         t1.join();
         t2.join();
