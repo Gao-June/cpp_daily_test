@@ -63,6 +63,11 @@
         "regex": "cpp",
         "typeindex": "cpp",
         "valarray": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "bit": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "iterator": "cpp",
+        "numbers": "cpp"
     }
 }

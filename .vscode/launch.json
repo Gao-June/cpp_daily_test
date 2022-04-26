@@ -15,7 +15,10 @@
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:mingw64/bin/gdb.exe",
+            
+            // "miDebuggerPath": "C:mingw64/bin/gdb.exe",
+            // 我的笔记本变成 C++ 17
+            "miDebuggerPath": "D:\\MinGW_gcc11\\winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64ucrt-10.0.0-r1\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
