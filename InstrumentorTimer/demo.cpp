@@ -2,6 +2,7 @@
  * 理论支持。（代码有改动）
  * 传送门：https://www.bilibili.com/video/BV1gZ4y1R7SG/?spm_id_from=pageDriver
  *        https://github.com/GavinSun0921/InstrumentorTimer
+ * chrome://tracing/  这个是 google自带的 json 解析工具
 */
 
 #include <iostream>
