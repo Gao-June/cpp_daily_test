@@ -1,9 +1,9 @@
 /**
  * 针对 “02_move 构造函数”给出的两个示例
- * 再次熟悉使用 std::move
- * 
+ * 再次熟悉使用 std::move()
  *      std::move 是一个由标准库提供的实用函数
  *      在编译时，它会找出输入的是什么类型。
+ * 另外补充了 assignment move版
  * 如下代码所示，只开辟了一次内存。
 */
 
@@ -23,7 +23,7 @@ public:
         memcpy( m_Data, string, m_Size );
     }
 
-    // copy 构造函数
+    // copy ctor
     String( const String& other ){
         std::cout << "Copy! " << std::endl;
         m_Size = other.m_Size;
@@ -31,21 +31,45 @@ public:
         memcpy( m_Data, other.m_Data, m_Size );
     }
 
+    // move ctor
     String( String&& other ) noexcept{
-        std::cout << "Move! " << std::endl;
-
+        std::cout << "Move" << std::endl;
 
         m_Size = other.m_Size;
         m_Data = other.m_Data;  
-
         other.m_Size = 0;
         other.m_Data = nullptr;
+    }
+
+    /**
+     * assignment move 移动赋值操作符
+     * 注意：实际上与 move ctor（在构造函数中构造了一个新对象）不同，
+     *      operator = 实际上是把另一个对象move到当前对象中
+     *      因此覆盖了当前对象
+     *      又，当前对象可能已经分配了内存
+     *      故，需要做到提前释放（避免内存泄漏）。
+     * 另外，还有一个需要注意的：
+     *      需要确保赋值前 两个对象并不相等，不然 delete[]后就芭比Q了。
+    */ 
+    String& operator= ( String&& other ) noexcept{
+        std::cout << "Assignment" << std::endl;
+
+        // 特殊情况判断
+        if ( this != &other ){
+            delete[] m_Data;    // 这一行极其重要！
+
+            m_Size = other.m_Size;
+            m_Data = other.m_Data;  
+            other.m_Size = 0;
+            other.m_Data = nullptr;
+        }
+        return *this;
     }
 
 
     // 析构函数
     ~String( ){
-        std::cout << "Destroyed!" << std::endl;
+        std::cout << "Destroyed" << std::endl;
     
         delete m_Data;
     }
@@ -97,9 +121,31 @@ private:
  *      Destroyed!     
 */
 int main( ){
+std::cout << "Test No.1" << std::endl;
     String str_1 = "hello_world";
+
+std::cout << "Test No.2" << std::endl;
+    // 同 String str_2 = std::move( str_1 );
     String str_2( std::move(str_1) );
     str_2.Print_String();
 
+std::cout << "Test No.3" << std::endl;
+    // 扩展了 operator = 
+    // 使之能够实现 str3 = str2;
+    String str_3 = "hello_world";
+    String str_4;
+    std::cout << "01_  str_3: ";
+    str_3.Print_String();
+    std::cout << "02_  str_4: ";
+    str_4.Print_String();
+
+    str_4 = std::move(str_3);   // assignment
+    std::cout << "03_  str_3: ";
+    str_3.Print_String();       // 这时候无输出了
+    std::cout << "04_  str_4: ";
+    str_4.Print_String();
+
+
+    std::cout << "Test End" << std::endl;
     return 0;
 }
