@@ -1,8 +1,10 @@
 /**
+ * 针对 “02_move 构造函数”给出的两个示例
  * 再次熟悉使用 std::move
  * 
- * std::move 是一个由标准库提供的实用函数
- * 在编译时，它会找出输入的是什么类型。
+ *      std::move 是一个由标准库提供的实用函数
+ *      在编译时，它会找出输入的是什么类型。
+ * 如下代码所示，只开辟了一次内存。
 */
 
 
@@ -73,13 +75,6 @@ private:
     String m_Name;
 };
 
-int main( ){
-    std::cout << "test No.1" << std::endl;
-    Entity entity( "Jeffy_Gao" );
-    entity.Print_Entity();
-
-    std::cout << "test No.2 " << std::endl;
-    String str_1 = "hello_world";
 
 /**
  * 现在希望 str_1 是右值
@@ -94,8 +89,17 @@ int main( ){
  *  =>    String str_2( std::move(str_1) );
  *      std::move 是一个由标准库提供的实用函数，
  * 
+ * 函数输出：
+ *      Created!       str_1 被实例 
+ *      Move!          "hello_world"传入 String，这时候不需要重新开辟堆上的空间
+ *      hello_world    str_2.Print_Entity()
+ *      Destroyed!     str_1、str_2被析构
+ *      Destroyed!     
 */
+int main( ){
+    String str_1 = "hello_world";
     String str_2( std::move(str_1) );
+    str_2.Print_String();
 
     return 0;
 }

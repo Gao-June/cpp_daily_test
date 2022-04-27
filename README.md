@@ -281,3 +281,5 @@
        main1.cpp 复现 2 次 copy过程
        main2.cpp 使用 move 构造函数对照（把 copy构造函数注释掉）
 >### 再次熟悉使用 std::move
+std::move 是一个由标准库提供的实用函数
+在编译时，它会找出输入的是什么类型。
