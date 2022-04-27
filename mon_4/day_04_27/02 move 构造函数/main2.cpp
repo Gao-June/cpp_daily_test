@@ -37,6 +37,7 @@ public:
 // move 构造函数
 // 通过指定 move 构造函数，希望在执行“复制”时，不会复制内存，而是变成移动
 // 当没有 move ctor时系统会调用 copy ctor； 有时，则调用 move ctor
+// noexcept 运算符进行编译时检查，若表达式声明为不抛出任何异常则返回true。
     String( String&& other ) noexcept{
         std::cout << "Move! " << std::endl;
 
