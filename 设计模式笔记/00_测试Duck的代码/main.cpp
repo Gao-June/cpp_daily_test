@@ -21,138 +21,33 @@
  *  实行功能分离：
  *      => 把变化的部分取出并封装，这样，以后就可以修改或扩展这个部分，而不会影响其它不需要变化的部分。
  *      => 这样系统会更有弹性。
+ * 文件介绍：
+ *  Duck.h 为最基本的class，里面封装了2个接口，以及所有 duck 的公共函数
+ *  FlayBehavior.h 和 QuackBehavior.h 分别对 fly()、quack() 进行封装
  */
 
 #include <iostream>
+#include "Duck.h"
 
-/**
- * @brief：
- * FlyBehavior ：飞行行为基类
- *      class FlyWithWings、class FlyNoWay会继承该接口
- */
-class FlyBehavior{
-public:
-    FlyBehavior() = default;
-    ~FlyBehavior() = default;
-
-public:
-    virtual void Fly( ) = 0;
-};
-
-/**
- * @brief: 
- * FlyWithWings ：对能飞的鸭子进行飞行实现
- */
-class FlyWithWings : public FlyBehavior{
-public:
-    FlyWithWings() = default;
-    ~FlyWithWings() = default;
-
-public:
-    void Fly( ){
-        std::cout << "I'm flying!" << std::endl;
-    }
-};
-
-/**
- * @brief:
- * FlyNoWay ：对不能飞的鸭子进行飞行实现
- */
-class FlyNoWay : public FlyBehavior{
-    void Fly( ){
-        std::cout << "I can't fly" << std::endl;
-    }
-};
-
-/**
- * @brief
- * QuackBehavior ：所有动作行为基类
- *      class Quack、class MuteQuack、Squeak 会继承该接口
- */
-class QuackBehavior{
-public:
-    QuackBehavior() = default;
-    ~QuackBehavior() = default;
-
-public:
-    virtual void quack( ) = 0;
-};
-
-class Quack : public QuackBehavior{
-public:
-    Quack();
-    ~Quack();
-
-public:
-    void quack( ){
-        std::cout << "Quack" << std::endl;
-    }
-};
-
-class MuteQuack : public QuackBehavior{
-public:
-    void quack( ){
-        std::cout << " <<Slience>> " << std::endl;
-    }
-};
-
-class Squeak : public QuackBehavior{
-public:
-    void quack( ){
-        std::cout << "Squeak" << std::endl;
-    }
-};
-
-
-/**
- * @brief:
- * Duck类中包含两个抽象类: FlyBehavior、 QuackBehavior
- *      FlyBehavior   接口：对 fly 做了封装
- *      QuackBehavior 接口：对 Quack(嘎嘎)做了封装
- */
-class Duck{
-public:
-    Duck() = default;
-    ~Duck(){
-        delete _fly_behavior;
-        delete _quack_behavior;
-    }
-
-public:
-    // 所有鸭子的公共行为
-    void Swim( ){
-        std::cout << "All ducks float, even decoys!" << std::endl;
-    }
-    
-    void Display( ){
-        std::cout << "Duck's Display" << std::endl;
-    }
-
-    // 委托给接口执行
-    void PerformFly( ){
-        _fly_behavior->Fly();
-    }
-
-    void PerformQuack( ){
-        _quack_behavior->quack();
-    }
-
-// 这里不能设置 private，不然无法修改指针指向
-protected:
-    FlyBehavior*     _fly_behavior;
-    QuackBehavior*   _quack_behavior; 
-};
-
+// 前置声明
+class Duck;
+class FlyBehavior;
+class QuackBehavior;
 
 
 // 具体 鸭子类 MiniDuckSimulator
 class MiniDuckSimulator : public Duck{
 public:
     MiniDuckSimulator() {
+        std::cout << "ctor MiniDuckSimulator" << std::endl;
+
+        // 给该类添加一些新特性
         _fly_behavior = new FlyWithWings();
         _quack_behavior = new Squeak();
     }
-    ~MiniDuckSimulator();
+    ~MiniDuckSimulator() {
+        std::cout << "dtor MiniDuckSimulator" << std::endl;
+    }
 };
 
 int main( ){
