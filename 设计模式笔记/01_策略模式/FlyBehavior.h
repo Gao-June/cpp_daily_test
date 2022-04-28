@@ -22,7 +22,7 @@ public:
 
 /**
  * @brief: 
- * FlyWithWings ：对能飞的鸭子进行飞行实现
+ * FlyWithWings ：对 能飞 的鸭子进行飞行实现
  */
 class FlyWithWings : public FlyBehavior{
 public:

@@ -35,10 +35,19 @@ public:
     void PerformFly( ){
         _fly_behavior->Fly();
     }
-
     void PerformQuack( ){
         _quack_behavior->quack();
     }
+
+    // 改变 duck 的技能
+    // eg. 传入 new FlyNoWay()
+    void SetFlyBehavior( FlyBehavior *fb ){
+        _fly_behavior = fb;
+    }
+    void SetQuackBehavior( QuackBehavior *qb ){
+        _quack_behavior = qb;
+    }
+
 
 // 这里不能设置 private，不然无法修改指针指向
 protected:

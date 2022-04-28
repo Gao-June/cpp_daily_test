@@ -6,8 +6,11 @@
  * @copyright Copyright (c) 2022
  * 
  * @brief 
- *  学习《Head First设计模式》中第一节 - “测试鸭子的行为”
- *  由于原书全是 java，自己还不是很适应
+ *  学习《Head First设计模式》中第一节 - “策略模式”
+ *  （由于原书全是 java，自己还不是很适应）
+ * 策略模式的定义：
+ *      策略模式顶一个一个算法族，分别封装起来，使得它们之间可以互相交换。
+ *      策略让算法的变化独立于使用它的客户。
  * 
  * 设计原则：
  *  针对接口编程，而不是针对实现编程。
@@ -23,6 +26,7 @@
  *      => 这样系统会更有弹性。
  * 文件介绍：
  *  Duck.h 为最基本的class，里面封装了2个接口，以及所有 duck 的公共函数
+ *  该 “ has-A ” 中，每只鸭子有一个FlayBehavior和QuackBehavior，以委托飞行和叫。
  *  FlayBehavior.h 和 QuackBehavior.h 分别对 fly()、quack() 进行封装
  */
 
@@ -35,7 +39,7 @@ class FlyBehavior;
 class QuackBehavior;
 
 
-// 具体 鸭子类 MiniDuckSimulator
+// 设计鸭子类 MiniDuckSimulator，并为其添加属性
 class MiniDuckSimulator : public Duck{
 public:
     MiniDuckSimulator() {
@@ -56,6 +60,13 @@ int main( ){
    
     mallard->Swim();
     mallard->Display();
+    mallard->PerformFly();
+    mallard->PerformQuack();
+
+    // 改变鸭子的飞行、叫声
+    std::cout << "改变鸭子飞行、叫声 技能" << std::endl;
+    mallard->SetFlyBehavior( new FlyNoWay() );
+    mallard->SetQuackBehavior( new MuteQuack() );
     mallard->PerformFly();
     mallard->PerformQuack();
 
