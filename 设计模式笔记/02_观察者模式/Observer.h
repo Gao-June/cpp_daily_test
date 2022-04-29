@@ -13,11 +13,12 @@
  * 文件包含：
  *      class Observer  观察者
  *          Update( ) 更新数据
- * 
  */ 
 
+#pragma once
 
 #include <iostream>
+#include "Subject.h"
 
 class Observer{
 public:
@@ -31,6 +32,7 @@ public:
 public:
     // 更新数据。
     // 当气象测量数据变化时观察者从 Subject获得的状态值。
-    void Update( float tmep, float humidity, float pressure );
-
+    void Update( float tmep, float humidity, float pressure ){
+        std::cout << "func_Update 温度： " << tmep << " 湿度： " << humidity << " 气压：" << pressure << std::endl;
+    }
 };

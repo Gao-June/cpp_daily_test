@@ -26,46 +26,20 @@
 
 #include <iostream>
 #include "Subject.h"
-
-/**
- * 这个显示实现了 Observer接口，所以它可以从 WeatherData对象中获取变化
- * 它也实现了 DisplayElement，因为我们的 API 打算要求所有显示元素实现这个接口
-*/
-class CurrentConditionsDisplay : public Observer, public DiaplayElement{
-private:
-    float _temperature;
-    float _humidity;
-    WeatherData _weatherData;
-
-public:
-
-    // ctor
-    // 构造器被传入 weatherData对象（ Subject ），我们用它来把显示注册为观察者
-    CurrentConditionsDisplay( WeatherData weatherData ){
-        this->_weatherData = weatherData;
-        weatherData.RegisterObserver( *this );
-    }
-
-    // class Observer 里有定义
-    void Update( float temperature, float humidity, float pressure ){
-        this->_temperature = temperature;
-        this->_humidity    = humidity;
-
-        Display( );
-    }
-
-    // 重写了 virtual DiaplayElement::Display() = 0
-    void Display( ){
-        std::cout << "当前温度: " << _temperature << "  当前湿度： " << _humidity << std::endl;
-    }
-
-};
+#include "Observer.h"
+#include "DisplayElement.h"
 
 
 
+// 测试案例
 int main( ){
+    WeatherData* weatherData = new WeatherData();
 
+    CurrentConditionsDisplay* currentConditionsDisplay = new CurrentConditionsDisplay(*weatherData);
 
+    weatherData->SetMeasurements( 80, 65, 30.4f );
+    weatherData->SetMeasurements( 82, 70, 29.8f );
+    weatherData->SetMeasurements( 78, 90, 39.4f );
 
     return 0;
 }
