@@ -5,8 +5,12 @@
 			"type": "shell",
 			"label": "task g++",
 			//"command": "C:\\mingw64\\bin\\g++.exe",
+			// 实验室电脑：
+			"command": "E:\\MinGW_gcc11\\winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64ucrt-10.0.0-r1\\mingw64\\bin\\g++.exe",
+			
 			// 我的笔记本更新到 c++ 17
-			"command": "D:\\MinGW_gcc11\\winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64ucrt-10.0.0-r1\\mingw64\\bin\\g++.exe",
+			//"command": "D:\\MinGW_gcc11\\winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64ucrt-10.0.0-r1\\mingw64\\bin\\g++.exe",
+			
 			"args": [
 				"-g",
 				"${file}",
@@ -14,7 +18,12 @@
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
 			"options": {
-				"cwd": "C:\\mingw64\\bin"
+				// 笔记本电脑
+				//"cwd": "C:\\mingw64\\bin"
+
+				// 实验室电脑
+				"cwd": "E:\\MinGW_gcc11\\winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64ucrt-10.0.0-r1\\mingw64\\bin"
+				
 			},
 			"problemMatcher": [
 				"$gcc"

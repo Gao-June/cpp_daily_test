@@ -5,10 +5,12 @@
             "intelliSenseMode": "gcc-x64",
             // 实验室电脑
             //"compilerPath": "C://mingw64//bin//g++.exe",       // 改为自己电脑上MinGW的编译器地址即可。
+            "compilerPath": "E://MinGW_gcc11//winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64ucrt-10.0.0-r1//mingw64//bin//g++.exe",
             
+
             // 宿舍电脑 更新到 C++ 17了
             //"compilerPath": "D://Dev-C//Dev-Cpp//MinGW64//bin//g++.exe",
-            "compilerPath": "D://MinGW_gcc11//winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64ucrt-10.0.0-r1//mingw64//bin//g++.exe",
+            //"compilerPath": "D://MinGW_gcc11//winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64ucrt-10.0.0-r1//mingw64//bin//g++.exe",
             
             "includePath": [
                 "${workspaceFolder}"
