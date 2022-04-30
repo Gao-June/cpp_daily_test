@@ -34,7 +34,7 @@ public:
 public:
     // 公共接口
     // 商品描述
-    std::string GetDescription( ){
+    virtual std::string GetDescription( ){
         return _description;
     }
 
@@ -48,7 +48,7 @@ public:
     // }
 
     // 不能设置为 private，不然派生类无法更改改变量
-    std::string _description = "Unknown Beverage";
+    std::string _description = "Unknown Beverage  ";
 
 };
 
@@ -70,7 +70,9 @@ public:
     Beverage* _beverage;
 
     // 重写 GetDescription()
-    std::string GetDescription( );
+    virtual std::string GetDescription( ) {
+        return _description;
+    }
 
 };
 

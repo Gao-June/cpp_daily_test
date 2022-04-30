@@ -52,25 +52,33 @@ public:
     }
 public:
     void Print( ){
-        std::cout << _beverage->GetDescription() << " $ "  << _beverage->Cost() << std::endl;
+        // std::cout << _beverage->GetDescription() << " $ "  << _beverage->Cost() << std::endl;
+        std::cout << _beverage->Cost() << "$" << std::endl;
     }
     
 public:
     Beverage* _beverage;
 };
 
-
+// 点单系统是 一种奶茶/咖啡 + 若干小料
 int main( ){
+std::cout << "No.1" << std::endl;
     // 来一杯浓缩咖啡，不加调料，打印出它的描述和价格
     StabuzzCoffee coffee1;
     coffee1._beverage = new Espresso();
+    std::cout << coffee1._beverage->GetDescription() << std::endl;
     coffee1.Print();
 
+std::cout << "No.2" << std::endl;
+    // 来一杯奶茶(0.89)，加 摩卡(0.2)、奶油(0.31)
+    // 在调用 coffee2.Pring() 的时候调用顺序：
+    // -> Cream.Cost() -> Mocha.Cost() -> TraWithMilk.Cost() 
     StabuzzCoffee coffee2;
-    coffee1._beverage = new TeaWithMilk();
-    coffee1.Print();
-
-  
+    coffee2._beverage = new TeaWithMilk();
+    coffee2._beverage = new Mocha( coffee2._beverage );
+    coffee2._beverage = new Cream( coffee2._beverage );
+    std::cout << coffee2._beverage->GetDescription() << std::endl;
+    coffee2.Print();
 
     return 0;
 }

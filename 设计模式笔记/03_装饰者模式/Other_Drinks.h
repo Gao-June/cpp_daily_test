@@ -27,8 +27,8 @@
 class Espresso : public Beverage{
 public:
     Espresso( ){
-        std::cout << "Espresso ctor" << std::endl;
-        _description= "Espresso";   // 并更改描述
+        //std::cout << "Espresso ctor" << std::endl;
+        _description= "订单详情： 浓缩咖啡 ";   // 并更改描述
     }
     ~Espresso( ){
         std::cout << "Espresso dtor" << std::endl;
@@ -37,7 +37,7 @@ public:
 public:
     // 重写了 Cost()
     double Cost( ){
-        std::cout << "class Espresso Cost() " << std::endl;
+        std::cout << "共花费：  ";
         return 1.99;
     }
 };
@@ -46,8 +46,8 @@ public:
 class TeaWithMilk : public Beverage{
 public:
     TeaWithMilk( ){
-        std::cout << "TeaWithMilk ctor" << std::endl;
-        _description= "Tea_With_Milk";   // 并更改描述
+        //std::cout << "TeaWithMilk ctor" << std::endl;
+        _description= "订单详情： 奶茶 ";   // 并更改描述
     }
     ~TeaWithMilk( ){
         std::cout << "TeaWithMilk dtor" << std::endl;
@@ -56,7 +56,7 @@ public:
 public:
     // 重写了 Cost()
     double Cost( ){
-        std::cout << "class TeaWithMilk Cost() " << std::endl;
+        std::cout << "共花费：    ";
         return 0.89;
     }
 };

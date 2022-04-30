@@ -5,12 +5,15 @@
  * @date 2022-04-30
  * @copyright Copyright (c) 2022
  * 
- * @brief 基于 基类 CondimentDecorator (Beverage.h)，派生的一些其它调料
+ * @brief   一些调料~ 
+ *  基于 基类 CondimentDecorator (Beverage.h)，派生的一些其它调料
  * 
  * 文件包含：
  *  class Mocha : public CondimentDecorator 调料 - 摩卡 （具体装饰者）
  *  class Cream : public CondimentDecorator 调料 - 奶油 （具体装饰者）
  *  class Soy   : public CondimentDecorator 调料 - 豆子 （具体装饰者）
+ * 
+ *  // 构造函数 传入 Beverage* 型， 在 main.cpp 中通过包裹对象来实现“加小料”，反馈相应的Cost()
  */
 
 #ifndef OTHER_SEASONINGS_H
@@ -26,6 +29,7 @@ public:
     Mocha( ){
         std::cout << "Mocha ctor" << std::endl;
     }
+
     Mocha( Beverage* beverage ){
         std::cout << "Mocha( Beverage beverage )" << std::endl;
 
@@ -42,7 +46,8 @@ public:
     // 重写方法
     // 饮料 Description + Mocha 描述
     std::string GetDescription( ){
-        return _beverage->GetDescription() + " , Mocha";
+        std::string name = _beverage->GetDescription() + " , Mocha";
+        return  name;
     }
 
     // 饮料 Cost +  Mocha 价格
@@ -73,7 +78,9 @@ public:
     // 重写方法
     // 饮料 Description + Cream 描述
     std::string GetDescription( ){
-        return _beverage->GetDescription() + " , Cream";
+        //std::cout << "调用了 奶油" << std::endl;
+        std::string name = _beverage->GetDescription() + " , Cream";
+        return  name;
     }
 
     // 饮料 Cost +  Cream 价格
@@ -104,7 +111,9 @@ public:
     // 重写方法
     // 饮料 Description + Soy 描述
     std::string GetDescription( ){
-        return _beverage->GetDescription() + " , Soy";
+        std::string name = _beverage->GetDescription() + " , Soy";
+        return  name;
+
     }
 
     // 饮料 Cost +  Soy 价格
