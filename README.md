@@ -295,3 +295,4 @@ std::move 是一个由标准库提供的实用函数
 >### 《Effective C++》 03_func()后接 const
 >### 《Effective C++》 04_不允许类被拷贝、赋值
 >### 《Effective C++》 05_operator=
+>### operator +=
