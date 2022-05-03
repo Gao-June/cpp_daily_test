@@ -12,7 +12,7 @@ public:
         std::cout << "Base ctor" << std::endl;
     }
 
-    // virtual ~Base( ){
+// virtual ~Base( ){
     ~Base( ){
         std::cout << "Base dtor" << std::endl;
     }
