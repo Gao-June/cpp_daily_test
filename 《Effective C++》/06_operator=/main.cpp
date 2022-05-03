@@ -1,7 +1,7 @@
 /**
  * operator = 为了能够连续使用 = 赋值，所以返回类型为 &，即 reference by this *
  *  eg. Base& operator= ( Base& b ){}
- * 
+ *  
  * 【注】系统会有自带的 operaotr =， 所以我在自己写的里面 = 100以示区别
  */
 
