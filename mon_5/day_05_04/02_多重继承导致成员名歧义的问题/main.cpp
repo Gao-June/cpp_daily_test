@@ -49,6 +49,8 @@ int main( ){
 
 // 方法 - 3 强烈推荐 使用 using 内部指定最接近正常使用
 // 见 class C
+    std::cout << "No.3 :" << std::endl;
+    std::cout << c.getVal() << "  " << c.aVal << std::endl;
 
     return 0;
 }
