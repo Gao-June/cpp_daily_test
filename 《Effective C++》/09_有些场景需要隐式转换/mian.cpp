@@ -7,6 +7,9 @@
  *  当在 member func() 中，写成Entity operator* ( const Entity& e) 会造成不能隐式转换的问题；
  *  当写成 non-member func()时候，写成Entity operator* ( const Entity& e1, const Entity& e2 )
  *      可以完成隐式转换
+ * 【注】
+ *      在写 operator* 的时候，e1 * e2 return的是一个 临时值，所以函数要 return-by-value
+ *      我自己写了一个 operator *=， 可以发现返回值是自身，因此可以 return-by-reference
  */
 
 #include <iostream>
@@ -35,6 +38,15 @@ public:
     //     return *this;
     // }
 
+    // p.s 接下面（operator*），如果我写成 *=， 这样能用 const Entity& operator*=(...)吗？
+    // 可以的！
+    const Entity& operator*= ( const Entity& e){
+        this->_x *= e.Get_x();
+        this->_y *= e.Get_y();
+        return *this;
+    }
+
+
     // 由于 _x, _y 是 private，所以需要写 func() 得到该变量
     int Get_x( ) const{
         return _x;
@@ -48,9 +60,11 @@ private:
 };
 
 // 写成 non-member func()
-    Entity operator* ( const Entity& e1, const Entity& e2 ){
-        return Entity( e1.Get_x() * e2.Get_x(), e1.Get_y() * e2.Get_y());
-    }
+// p.s. 这里不能写成 const Entity& operator*(...) 因为不能对一个临时值进行返回其 reference
+const Entity operator* ( const Entity& e1, const Entity& e2 ){
+    return Entity( e1.Get_x() * e2.Get_x(), e1.Get_y() * e2.Get_y());
+}
+
 
 int main( ){
     std::cout << "test No.1" << std::endl;
@@ -70,8 +84,14 @@ int main( ){
     // Entity operator* ( const Entity& e) 时不能隐式转换
     // 写成 non-member func时候可以隐式转换
     e4 = 2 * e4;
-
     e4.Print();
+
+    // 测试 *=
+    std::cout << "test No.3" << std::endl;
+    Entity e5(1, 2);
+    Entity e6(1, 2);
+    e5 *= e6;
+    e5.Print();
 
     return 0;
 }
