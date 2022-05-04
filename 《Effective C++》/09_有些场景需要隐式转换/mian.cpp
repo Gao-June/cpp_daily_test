@@ -1,5 +1,6 @@
 /**
  * 有些场景仍然需要 写成 non-member func进行隐式类型转换（implicit type conversion）
+ * 《Effective C++》 条款-24：若所有参数皆需类型转换，请为此采用 Non-member func()
  * 
  * 举例： 写一个 operator*， 然后测试其交换律
  * 结论：
