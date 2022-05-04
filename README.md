@@ -302,3 +302,4 @@ std::move 是一个由标准库提供的实用函数
 ## day_2022_05_03
 >### 《Effective C++》 06_operator =
 >### 《Effective C++》 07_以 pass-by-reference-to-const 替换 pass-by-value
+>### 《Effective C++》 08_探究 return-by-reference 和 return by object的区别
