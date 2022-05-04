@@ -18,7 +18,7 @@ public:
         std::cout << "ctor(int x, int y)" << std::endl;
     }
     // copy ctor
-    Entity( Entity& e ) : _x(e._x), _y(e._y){
+    Entity( const Entity& e ) : _x(e._x), _y(e._y){
          std::cout << "copy ctor" << std::endl;
     }
 
@@ -26,7 +26,7 @@ public:
         std::cout << "dtor" << std::endl;
     }
 
-    void Print( ){
+    void Print( ) const{
         std::cout << "x: " << _x << "  y: " << _y << std::endl;
     }
 
@@ -36,7 +36,7 @@ private:
 
 // 用 &e 不会生成新的 ctor 和 dtor
 // 用 e  会调用 copy ctor 和 dtor
-void Print_Class( Entity e ){
+void Print_Class( const Entity& e ){
     std::cout << "func(): " << std::endl;
     e.Print(); 
 }
