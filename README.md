@@ -305,4 +305,5 @@ std::move 是一个由标准库提供的实用函数
 >### 《Effective C++》 08_探究 return-by-reference 和 return by object的区别
 >### 《Effective C++》 09_有些场景仍然需要 写成 non-member func进行隐式类型转换
 >### 学习 assert 的用法
+>### 多重继承导致成员名歧义的问题
 
