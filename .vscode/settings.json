@@ -97,6 +97,9 @@
         "shared_mutex": "cpp",
         "span": "cpp",
         "syncstream": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "queue": "cpp",
+        "xhash": "cpp",
+        "xtree": "cpp"
     }
 }

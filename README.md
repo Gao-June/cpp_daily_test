@@ -299,7 +299,7 @@ std::move 是一个由标准库提供的实用函数
 >### copy ctor 里参数写 const，能调用非const class吗？
 >### 简单调试
 
-## day_2022_05_03
+## day_2022_05_04
 >### 《Effective C++》 06_operator =
 >### 《Effective C++》 07_以 pass-by-reference-to-const 替换 pass-by-value
 >### 《Effective C++》 08_探究 return-by-reference 和 return by object的区别
@@ -309,4 +309,5 @@ std::move 是一个由标准库提供的实用函数
 >### 用仿函数、lambda对set进行自定义排序
 >### 探究 是否可以用 仿函数代替 lambda（可以）
 
-
+## day_2022_05_05
+>### for_each 的练习
