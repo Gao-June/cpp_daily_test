@@ -13,7 +13,14 @@
             //"compilerPath": "D://MinGW_gcc11//winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64ucrt-10.0.0-r1//mingw64//bin//g++.exe",
             
             "includePath": [
-                "${workspaceFolder}"
+                //"${workspaceFolder}",
+                
+                // 我自己加的boost库位置
+                "${workspaceFolder}/**",
+                "E://MinGW_gcc11//winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64ucrt-10.0.0-r1//mingw64//include//boost_1_79_0"
+                
+
+                
     ],
     "defines": [],
     "cStandard": "c11",
