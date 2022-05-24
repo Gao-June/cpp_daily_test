@@ -319,4 +319,5 @@ std::move 是一个由标准库提供的实用函数
 >### 开始boost
 
 ## day_2022_05_24
->### 《Boost》lexical_cast 数值转换
+>### 《Boost》01 - 数值转换 lexical_cast
+>### 《Boost》02 - 字符串格式化 format
