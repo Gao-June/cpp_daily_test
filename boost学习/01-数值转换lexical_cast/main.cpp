@@ -1,17 +1,19 @@
 /*
-#include <boost/lexical_cast.hpp>
-    中定义了此函数lexical_cast使用统一接口形式实现任意类型之间的转换，增强了易用性。
-如果转换发生了意外，
-    lexical_cast会抛出一个bad_lexical_cast异常，因此程序中需要对其进行 try-catch。
+    #include <boost/lexical_cast.hpp>
+        中定义了此函数lexical_cast使用统一接口形式实现任意类型之间的转换，增强了易用性。
+    如果转换发生了意外，
+        lexical_cast会抛出一个bad_lexical_cast异常，因此程序中需要对其进行 try-catch。
+    其最大优势也是能够给出足够齐全的 err information
+    lexical_cast 里面嵌入了 C/C++的 stoi函数
 */
 
 #include <iostream>
 #include <string>
 #include <boost/lexical_cast.hpp>
 
+using namespace boost;
+
 int main( ){
-    using boost::lexical_cast;
-    using boost::bad_lexical_cast;
 
     try{
         // string to int
