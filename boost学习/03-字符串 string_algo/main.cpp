@@ -48,8 +48,18 @@ string_algo库简介：
     【返回】 bool 类型
 
 - 分类：用于检测一个字符是否符号某种特性，主要用于搭配其它算法
-    “懒得写了”
+    is_space：字符是否为空格
+    is_alnum：字符是否为字母和数字字符
+    is_alpha：字符是否为字母
+    is_cntrl：字符是否为控制字符
+    is_digit：宇符是否为十进制数字
+    is_lower：字符是否为小写字符
+    is_punct：字符是否为标点符号字符
+    is_upper：字符是否为大写字符
+    is_xdigit：字符是否为十六进制数字
+    is_anyof：字符是否是参数字符序列中的任意字符
 
+“其它的懒得写了”
 */
 
 #include <iostream>
