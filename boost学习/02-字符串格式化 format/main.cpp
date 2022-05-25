@@ -17,6 +17,7 @@ Boost-format:
 */
 
 #include <iostream>
+#include <string>
 #include <boost/format.hpp>
 
 using namespace boost;
@@ -51,6 +52,14 @@ int main( ){
 
     std::cout << "使用5\tN$指定用哪个参数" << std::endl;
     std::cout << format("---%2$s -----%1$s---")  %"Boost" % "Hello"<< std::endl;
+
+    std::cout << "使用5\t自定义使用试试" << std::endl;
+    std::string st1("hello,world");
+    int num1 = 18;
+    format fmt5( " %2%  ----- %1% -----   %2%  !!!" );
+    fmt5 % num1;
+    fmt5 % st1;
+    std::cout  << fmt5 << std::endl;
 
     return 0;
 }
