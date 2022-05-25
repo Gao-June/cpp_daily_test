@@ -23,6 +23,8 @@
         因此将 指针对象放到 CreateObject() 里
 【验证】
     我在 private 里加了个变量 test_num，然后创建成员函数 Change_num 进行测试
+【补】 这个人讲的挺好的：
+    https://www.cnblogs.com/loveis715/archive/2012/07/18/2598409.html
 */
 
 #include <iostream>
