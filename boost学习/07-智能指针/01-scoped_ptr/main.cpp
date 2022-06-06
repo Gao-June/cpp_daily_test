@@ -61,5 +61,7 @@ std::cout << "test 2 scoped_ptr" << std::endl;
     scoped_ptr<A> s3;
     // s3 = s1;                 // private
 
+    getchar();
+
     return 0;
 }
