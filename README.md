@@ -325,3 +325,6 @@ std::move 是一个由标准库提供的实用函数
 ## day_2022_05_25
 >### 《Boost》03 - 字符串操作函数与算法 string_algo
 >### 《设计模型》04 - 单例模式
+
+## day_2022_06_1
+>### 《Boost》04 - 类型推导 BOOST_AUTO/BOOST_TYPEOF
