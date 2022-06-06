@@ -334,3 +334,4 @@ std::move 是一个由标准库提供的实用函数
 >### 《Boost》06 - date_time库 01 - data类
 >### 《Boost》06 - date_time库 02 - data_period类
 >### 《Boost》06 - date_time库 03 - ptime类
+>### 《Boost》07 - 智能指针 01 - scoped_ptr

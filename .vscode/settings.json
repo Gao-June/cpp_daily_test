@@ -104,6 +104,8 @@
         "*.ipp": "cpp",
         "strstream": "cpp",
         "rope": "cpp",
-        "slist": "cpp"
+        "slist": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp"
     }
 }
