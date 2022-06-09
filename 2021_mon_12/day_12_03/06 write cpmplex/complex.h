@@ -9,17 +9,17 @@ class complex;
 
 class complex{
 public:
-    // é»˜è?¤æ„é€ å‡½æ•?
-    // Íê¶¿×ÓÁË£¬ÎÒÒ²²»ÖªµÀÕâÀïµÄÂÒÂëÊÇÊ²Ã´ÁË¡£
+    // æ¦›æ¨¿?ã‚†ç€¯é–«çŠ²åš±é?
+    // å®ŒçŠŠå­äº†ï¼Œæˆ‘ä¹Ÿä¸çŸ¥é“è¿™é‡Œçš„ä¹±ç æ˜¯ä»€ä¹ˆäº†ã€‚
     complex ( double r = 0, double i = 0 ) : re( r ), im( i ) { }
 
-    // é‡è½½æ“ä½œç¬?
-    // Ç°Ãæ¼Ó²»¼Ó & ¶¼¿ÉÒÔ
+    // é–²å¶ˆæµ‡é¿å¶„ç¶”ç»—?
+    // å‰é¢åŠ ä¸åŠ  & éƒ½å¯ä»¥
     complex& operator += ( const complex& );
     complex operator -= ( const complex& );
     complex operator *= ( const complex& );
 
-    // è¾“å‡ºæˆå‘˜å˜é‡ï¼? 
+    // æˆæ’³åš­é´æ„¬æ†³é™æ©€å™ºé”›? 
     double get_real_complex( ) const {
         return re;
     }

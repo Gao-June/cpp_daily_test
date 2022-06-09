@@ -100,6 +100,12 @@
         "variant": "cpp",
         "queue": "cpp",
         "xhash": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "*.ipp": "cpp",
+        "strstream": "cpp",
+        "rope": "cpp",
+        "slist": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp"
     }
 }

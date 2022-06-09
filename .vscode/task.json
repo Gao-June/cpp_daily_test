@@ -15,7 +15,15 @@
 				"-g",
 				"${file}",
 				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				
+				// 下面是我加的
+				"-fdiagnostics-color=always",
+				"${fileDirname}/*.cpp",
+				"-lmysqlclient"
+
+				//在这里加了 boost 库
+				
 			],
 			"options": {
 				// 笔记本电脑
