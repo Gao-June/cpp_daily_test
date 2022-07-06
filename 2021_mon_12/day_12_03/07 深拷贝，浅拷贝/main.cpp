@@ -24,6 +24,11 @@ public:
     }
 
     str* operator= ( const str &s ){
+        // 要先判断自拷贝的情况
+        if( s.data == this->data ){
+            return this;
+        }
+
         // 深拷贝
         delete[] data;      // 先清空资源
         data = new char [ strlen( s.data ) + 1 ];
