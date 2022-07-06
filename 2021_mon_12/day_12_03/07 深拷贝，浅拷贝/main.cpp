@@ -1,5 +1,5 @@
 /*
-    æµ…æ‹·è´
+    Ç³¿½±´
 */
 
 #include <bits/stdc++.h>
@@ -23,20 +23,20 @@ public:
         }
     }
 
-    str* operator= ( const str &s ){
-        // è¦å…ˆåˆ¤æ–­è‡ªæ‹·è´çš„æƒ…å†µ
-        if( s.data == this->data ){
-            return this;
+    str& operator= ( const str &s ){
+        // ÒªÏÈÅĞ¶Ï×Ô¿½±´µÄÇé¿ö
+        if( this == &s ){
+            return *this;
         }
 
-        // æ·±æ‹·è´
-        delete[] data;      // å…ˆæ¸…ç©ºèµ„æº
+        // Éî¿½±´
+        delete[] data;      // ÏÈÇå¿Õ×ÊÔ´
         data = new char [ strlen( s.data ) + 1 ];
         strcpy( data, s.data );
 
-        // æµ…æ‹·è´
+        // Ç³¿½±´
         // data = s.data;
-        return this;
+        return *this;
     }
 
     ~str( ){
@@ -60,20 +60,20 @@ public:
 
 int main(){
     str  a1( "hello" );
-    str  a2("world");
+    str  a2( "world" );
 
-    cout << "æ‹·è´å‰ï¼š" << endl;
+    cout << "¿½±´Ç°£º" << endl;
     a1.prinT();
     a2.prinT();
 
-    // å¼€å§‹æµ…æ‹·è´
-    cout << "æ‹·è´åï¼š" << endl;
+    // ¿ªÊ¼Ç³¿½±´
+    cout << "¿½±´ºó£º" << endl;
     a2= a1;
     a1.prinT();
     a2.prinT();
 
-    // éªŒè¯ æµ…æ‹·è´ï¼š ç”±äº data æ˜¯ privateæ‰€ä»¥éœ€è¦å†™ä¸€ä¸ªå‡½æ•°æ”¹å˜ä¸ªå€¼
-    cout << " éªŒè¯ æµ…æ‹·è´/æ·±æ‹·è´ " << endl;
+    // ÑéÖ¤ Ç³¿½±´£º ÓÉÓÚ data ÊÇ privateËùÒÔĞèÒªĞ´Ò»¸öº¯Êı¸Ä±ä¸öÖµ
+    cout << " ÑéÖ¤ Ç³¿½±´/Éî¿½±´ " << endl;
     //a1.data_change(2);
     a1.data[2] += 1;
     a1.prinT();
